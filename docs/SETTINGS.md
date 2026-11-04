@@ -1,91 +1,159 @@
-# SHIELD settings guide
+# SHIELD settings
 
-Open **Android Settings → Shield settings**. These features are implemented in the development project; the final combined ROM still needs its own acceptance test.
+Open **Android Settings → Shield settings**.
 
 ## Controller settings
 
-Choose the built-in controller, enable remapping, then choose a global profile or a particular app. Change only the buttons you need; other controller inputs keep their normal behaviour.
+| Choice | What it does |
+|---|---|
+| Built-in controller | Opens button remapping |
+| Enable controller profiles | Turns your saved mappings on or off |
+| Global default | Sets the mapping used by all apps |
+| App profile | Sets a different mapping for one app |
+| Use global setting | Makes that app follow the global mapping |
+| NVIDIA button — short press | Changes the short press only |
+| Back button | Changes the Back button action |
+| Sound button | Changes the Sound button action |
+| Test controller | Shows button, stick, and trigger input |
+| Reset controller profiles | Deletes mappings and restores original button behaviour |
 
-Examples:
+Button actions:
 
-- Map **NVIDIA single-press → Guide** for a streaming app that accepts a controller Guide button.
-- Map **Back → Select** when an app needs a Select button.
-- Use the **Sound button** as an alternative remappable button.
+- **Default suspend/wake:** original NVIDIA short-press behaviour.
+- **Default Back / Default volume:** original Back or Sound behaviour.
+- **Guide / Mode:** sends a controller Guide button.
+- **Select:** sends controller Select.
+- **Start:** sends controller Start.
+- **Back:** sends Android Back; offered for the Sound button.
+- **No action:** ignores that button press.
 
-The Portable does not have a separate physical Guide button. The setting creates a Guide input from a chosen button; it does not add a new physical button. **Long-press NVIDIA remains the power menu.** Whether a remote app forwards Guide to a host depends on that app too.
+**Long-press NVIDIA remains the power menu.** The separate Home button stays Home.
 
-Controller testing and profile reset are available. Touchscreen-mapper controls expose the existing NVIDIA mapping path for games without native controls; support depends on the game and mapper. It is not a promise that every touch game becomes fully playable.
+### NVIDIA touchscreen Game Mapper
+
+- **On:** allows controller buttons to be placed over touchscreen controls.
+- **Off:** disables the mapper.
+- **How to open Game Mapper:** open the app and hold **Start**, move the buttons/sticks over its touch controls, then save.
 
 ## SHIELD accessories
 
-Pair or manage a supported controller, open its details, inspect available battery/device information, or forget it. Battery information depends on what the accessory reports. The 2015 P2570 controller has been exercised during development; other controllers and old remotes need their own checks.
+- **Pair accessory:** opens accessory pairing.
+- **Accessory name:** opens its details.
+- **Battery:** shows the reported battery level; “not reported” means no level was supplied.
+- **Connection:** shows the connection type/status.
+- **Device information:** shows details supplied by the accessory.
+- **Forget:** removes the pairing; pair again to reconnect.
 
 ## Launcher settings
 
-SHIELD Console is the intended initial Home after setup. Fresh-install setup behaviour is still a release test, not a completed claim.
+- **Startup intro:** play or skip the intro when the launcher starts fresh.
+- **Video intro:** on for video; off for the lighter animation.
+- **Intro sound:** play or mute intro audio. It follows media volume.
+- **Preview startup intro:** play it now. **A or touch skips.**
+- **Quick Panel settings:** opens the sidebar controls below.
+- **Android settings:** opens normal Android settings.
+- **Controls & about:** shows the button guide.
+- **Return to library:** returns to your apps.
 
-Use the D-pad or left stick to move. **A** selects, **B** returns, **X** quick-launches, and **Y** changes favourite status where offered. **L1/R1** change tabs, **L2/R2** change Games/Apps filters, and **Start** opens or closes the launcher menu.
+In the library, **Cover / icon** chooses artwork or restores the original icon. This does not uninstall the app. **Y** changes favourite status where offered.
 
-The launcher settings provide:
+### Launcher buttons
 
-- **Startup intro:** enable or disable the intro on a fresh launcher start.
-- **Video intro:** video or the lighter logo animation.
-- **Intro sound:** video audio at the current media volume; off by default.
-- **Preview startup intro:** try it; **A or touch skips**.
-- **Quick Panel settings**, Android settings, and the controls guide.
-
-The intro belongs to the launcher. It does not replace the ROM boot animation. Intro artwork/video distribution remains a release review item.
-
-Use an app's **Cover / icon** option to choose artwork or restore its original app icon. Restoring the icon removes the custom cover, not the app or its saves. Recents in the launcher track launches from that launcher.
+**D-pad / left stick:** move. **A:** select/details. **B:** back. **X:** quick launch. **L1/R1:** change tabs. **L2/R2:** change Games/Apps filters. **Start:** open or close the menu.
 
 ## Quick Panel
 
-Open **Launcher settings → Quick Panel settings**. Turn on the master switch and explicitly enable **SHIELD Quick Panel** in Android Accessibility.
+Open **Launcher settings → Quick Panel settings**.
 
-Open the panel with a left-edge swipe or by holding ordinary Back for about **0.6 seconds**. It offers shortcuts such as Home, recent apps, media volume, and **Quit with confirmation**. Opening it does not necessarily pause a game. Quit can lose unsaved progress.
+- **Enable Quick Panel:** master on/off switch.
+- **Left-edge swipe:** opens it with an inward swipe from the left handle.
+- **Long-press Back:** opens it after holding Back for about 0.6 seconds.
+- **Preview sidebar:** tries it without opening another app.
+- **Android accessibility service:** enables the service needed for these shortcuts.
+- **Help & controls:** shows the shortcut guide.
 
-For each app choose **Use global settings**, **Disabled in this app**, or **Custom shortcuts**. Moonlight is excluded by default to avoid stealing streaming input. A master-off setting overrides every app profile.
+### Per app settings
 
-If Back has been remapped to Select or Guide, use edge swipe instead: the Back-hold shortcut cannot intercept the replacement controller input. The service does not read screen contents or use a network connection. It does observe foreground-app/window information for its shortcuts.
+- **Use global settings:** follow the main shortcut switches.
+- **Disabled in this app:** hide the sidebar and disable its shortcuts here.
+- **Custom shortcuts:** choose swipe and long-press Back separately for this app.
+
+The master switch must still be on. If Back is mapped to Select/Guide, use swipe instead. Exclude a streaming app if the sidebar interferes with its controls.
+
+### Sidebar choices
+
+**Resume:** close the sidebar. **Home:** open the launcher. **Recent apps:** show open apps. **Volume −/+ :** change media volume. **Quit:** close the current app after confirmation. **Settings:** open panel settings.
+
+Opening the panel may not pause the app. Quit can lose unsaved progress.
 
 ## Fan control
 
-| Mode | What it does |
-|---|---|
-| Quiet | Original quieter fan behaviour |
-| Performance | Stronger cooling for all apps |
-| Maximum cooling | Strongest cooling, with more fan noise |
-| Auto | Performance cooling for selected foreground apps, Quiet elsewhere |
+- **Quiet:** quieter, original fan behaviour.
+- **Performance:** stronger cooling for all apps.
+- **Maximum cooling:** strongest cooling; louder fan.
+- **Auto:** stronger cooling for selected foreground apps, quieter elsewhere.
+- **Apps with extra cooling:** choose the apps used by Auto.
 
-Auto uses the companion Quick Panel service to follow foreground apps. Select **Apps with extra cooling** to change the list. Stronger cooling is not a guaranteed FPS increase.
-
-**Overclock settings are not available.** The experimental GPU boost entry is also safety-gated off in the ROM configuration. Do not interpret its “up to 828 MHz” label as an available, validated overclock or guaranteed frequency. No CPU/RAM overclock is provided as a finished feature.
+Auto needs the Quick Panel service to follow the current app. **GPU boost**, if shown as unavailable, is not active. **Overclock settings** are unavailable.
 
 ## RothGL
 
-Leave it off when a game already works normally. RothGL is a partial, experimental compatibility layer, not a complete ES3 driver or a universal speed boost.
+Optional graphics compatibility settings. It does not provide complete ES3 support. Leave it off unless needed.
 
-The home page has four choices:
+![RothGL menu](../images/rothgl-home.png)
 
-1. **About RothGL:** what it does and a short guide.
-2. **Google Play ES3 games:** an experimental catalogue-visibility switch.
-3. **Games:** choose a game, turn RothGL on/off, and open it.
-4. **FPS counter:** optional counter settings with limited support.
+### Main choices
 
-To try a game: save your progress, open **Games**, choose it, enable **Use RothGL**, accept the close-game warning, then open it again. To return to normal graphics, turn the same switch off and reopen the game. The game may be closed when applying a change.
+- **About RothGL:** short explanation and help.
+- **Google Play ES3 games:** opens the store visibility options.
+- **Games:** selects an installed app.
+- **FPS counter:** opens the frame-counter options.
 
-![Per-game RothGL switch and Advanced settings](../images/rothgl-game.png)
+### Google Play ES3 games
 
-**Advanced settings** contains library choices, older compatibility workarounds, and per-game FPS options. Keep the suggested defaults unless troubleshooting a specific game. Older “Hybrid” names may still exist internally; they are not a separate promise of full ES3 support.
+- **Show more ES3 games:** changes which apps Google Play may offer. Turning it off restores normal reporting. Download availability is not a guarantee that an app will run.
+- **Open Google Play:** opens the store.
+- **Download vs play:** explains the difference.
 
-The **Show more ES3 games** switch may make additional games eligible to appear in Google Play. It does **not** make them run, add missing GPU features, change your purchases, bypass payment, or guarantee certification. RothGL still needs to be selected separately for a game.
+### Games
 
-![Google Play ES3 games with one visibility switch](../images/rothgl-play.png)
+- **Search games:** finds an entry.
+- **Add a missing game:** adds an installed app to the list.
+- **Use RothGL:** on for the selected app; off for normal graphics.
+- **Open game:** opens the selected app.
+- **Use normal graphics:** removes an older graphics profile when shown.
+- **Advanced settings:** opens the extra choices below.
 
-The FPS counter is not supported by every game or graphics path. A missing counter alone does not mean a game has crashed.
+Save progress before applying a graphics change: it closes the selected app. Turning it off keeps installed files and saves.
 
-## Other development fixes
+### Advanced settings
 
-The project includes speaker-initialization and audio-latency work, controller/accessory fixes, and HDMI console-mode work so the built-in screen can turn off during external-display use. These must be rechecked on the final combined image. Wi-Fi reconnect reliability remains a test item.
+- **Graphics library — Automatic:** keeps the suggested library.
+- **Other listed libraries:** manually chooses another available library.
+- **Apply library choice:** closes the app and uses that choice.
+- **FPS counter:** sets the counter for this app.
+- **Older compatibility options:** opens the optional compatibility switches below.
+- **Technical status / Game version:** displays information; changes nothing.
+- **About RothGL:** opens help.
 
-An App Fixes component is included in the private candidate. Treat available fixes as game/version-specific, not as permission to modify every installed APK. It does not supply paid game files.
+### Older compatibility options
+
+Keep these off unless you need a specific workaround. They replace the selected graphics profile, rather than adding to it.
+
+- **Enable legacy compatibility layer:** enables the older graphics path.
+- **Advertise ES3 to this game:** changes the graphics version reported inside this app.
+- **ES3 context-version compatibility:** adjusts graphics-context version reporting.
+- **Blur-shader workaround:** changes blur processing where this option is available.
+- **Android UI compatibility:** changes how the app's Android menus are drawn.
+- **Use verified older profile:** applies the offered saved profile when available.
+- **Apply custom profile:** saves and applies your selected switches.
+- **Use normal graphics:** turns the profile off.
+
+### FPS counter
+
+- **Show FPS counter:** default on/off for supported profiles.
+- **Position:** Top right, Top left, Bottom right, or Bottom left.
+- **For this app:** Use global setting, Show, or Hide.
+- **Counter support:** explains availability.
+
+The counter needs a compatible graphics profile. Enabling it does not enable RothGL, and the number may differ from frames actually displayed.
