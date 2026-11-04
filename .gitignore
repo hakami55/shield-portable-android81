@@ -1,0 +1,22 @@
+# Allowlist only the reviewed documentation package. Firmware is not staged.
+*
+!.gitignore
+!README.md
+!NOTICE.md
+!release-status.json
+!docs/
+!docs/SETTINGS.md
+!docs/DOWNLOADS.md
+!docs/INSTALL.md
+!docs/MEDIA.md
+!docs/HELP.md
+!docs/RELEASE_CHECKLIST.md
+!docs/CHANGES.md
+!images/
+!images/rothgl-home.png
+!images/rothgl-about.png
+!images/rothgl-game.png
+!images/rothgl-play.png
+!resources/
+!resources/gapps-config.txt
+!resources/REFERENCE_SHA256SUMS.txt

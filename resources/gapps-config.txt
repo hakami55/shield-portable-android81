@@ -1,0 +1,6 @@
+# Install Open GApps required core only: Play Store, Play services, framework,
+# account/setup components, backup transport, and sync infrastructure.
+# Pico optional apps (Google TTS, Google Package Installer, Calendar Sync, and
+# Dialer Framework) are intentionally omitted to preserve /system headroom.
+Include
+skipswypelibs

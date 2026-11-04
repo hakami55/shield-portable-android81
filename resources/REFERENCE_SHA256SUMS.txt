@@ -1,0 +1,2 @@
+bb4ac27eecb0eba4ac991a6658a499e0c8ab442c137bbb8c7d3b460de72dd020  twrp-3.2.2-0-roth.img
+034c91278ab3c7f9af15fb8a77633dabaf490105cc42ad7d5be616220202f2d4  open_gapps-arm-8.1-pico-20220215.zip
