@@ -77,6 +77,10 @@ Save your game before switching; the display transition can restart Android's in
 
 ## Launcher settings
 
+![SHIELD Console home screen and physical-button shortcuts](../images/shield-console.png)
+
+*Example library; games and apps shown are not included.*
+
 - **Startup intro:** play or skip the intro when the launcher starts fresh.
 - The public ROM uses the lightweight built-in logo animation; no startup video or intro sound is included.
 - **Preview startup intro:** play it now. **A or touch skips.**
@@ -113,6 +117,10 @@ Open **Launcher settings → Quick Panel settings**.
 The master switch must still be on. If Back is mapped to Select/Guide, use swipe instead. Exclude a streaming app if the sidebar interferes with its controls.
 
 ### Sidebar choices
+
+![Quick Panel sidebar open over an app](../images/quick-panel-sidebar.png)
+
+*Example sidebar layout; available options can vary. The background app is not included.*
 
 **Resume:** close the sidebar. **Home:** open the launcher. **Recent apps:** show open apps. **Volume −/+ :** change media volume. **Fan:** cycle cooling modes. **Quit:** close the current app after confirmation. **Settings:** open panel settings.
 

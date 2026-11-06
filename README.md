@@ -49,6 +49,10 @@ Open **Settings → Shield settings → Controller settings → NVIDIA touchscre
 
 ### A home screen made for the controller
 
+![SHIELD Console launcher with a controller-friendly library and button guide](images/shield-console.png)
+
+*Example library. Games and apps shown are not included.*
+
 **SHIELD Console** becomes your home after a fresh setup. Navigate with the D-pad, stick or touch. Choose app icons or covers, mark favourites and use the Start menu for shortcuts. Fresh setup uses **Dark style with a Black background**.
 
 **A** selects · **B** goes back · **X** quick-launches · **Start** opens the menu.
@@ -61,9 +65,18 @@ Map **Back, Sound and the NVIDIA short press** globally or for one app. Choose a
 
 ### Quick Panel, without leaving your game
 
-![Quick Panel settings with swipe, long-press Back and per-app controls](images/quick-panel.png)
+![SHIELD Quick Panel open over an app, with Home, recent apps, volume and Quit shortcuts](images/quick-panel-sidebar.png)
+
+*Example sidebar layout. Available options can vary; the background app is not included.*
 
 Swipe from the left or hold **Back** for shortcuts to Home, recent apps, volume, cooling and Quit. Turn it off for individual apps when you want uninterrupted streaming. It needs your permission to enable its Accessibility service.
+
+<details>
+<summary><b>See the Quick Panel settings</b></summary>
+
+![Quick Panel settings with swipe, long-press Back and per-app controls](images/quick-panel.png)
+
+</details>
 
 ### RothGL: optional graphics help
 
