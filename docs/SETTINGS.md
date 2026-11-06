@@ -57,7 +57,7 @@ Button actions:
 
 ## SHIELD accessories
 
-The restored wireless-controller connection targets the **2015 SHIELD Controller (P2570)**. It uses Wi-Fi Direct, not Bluetooth. Do not assume another controller model or a SHIELD remote is supported. The next package still needs its accessory retest.
+The wireless-controller settings target the **2015 SHIELD Controller (P2570)**. It uses Wi-Fi Direct, not Bluetooth. Other controller models are not confirmed. **Pairing is unavailable in the current package; repair and retest are pending.**
 
 - **Pair accessory:** opens accessory pairing.
 - **Accessory name:** opens its details.
@@ -120,13 +120,17 @@ The master switch must still be on. If Back is mapped to Select/Guide, use swipe
 
 ![Quick Panel sidebar open over an app](../images/quick-panel-sidebar.png)
 
-*Example sidebar layout; available options can vary. The background app is not included.*
+*Quick Panel captured on the SHIELD. The background app is not included.*
 
 **Resume:** close the sidebar. **Home:** open the launcher. **Recent apps:** show open apps. **Volume −/+ :** change media volume. **Fan:** cycle cooling modes. **Quit:** close the current app after confirmation. **Settings:** open panel settings.
 
 Opening the panel may not pause the app. Quit can lose unsaved progress.
 
 ## Fan control
+
+![Fan settings with Quiet selected and GPU boost inactive](../images/fan-settings.png)
+
+![Available fan modes](../images/fan-modes.png)
 
 - **Quiet:** quiet cooling and automatic CPU power saving.
 - **Performance:** stronger cooling and all four CPU cores available; uses more battery.

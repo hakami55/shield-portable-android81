@@ -30,8 +30,7 @@ The next downloadable package still needs its own final checks. Accessory availa
 | **Built-in gamepad** | Play with the sticks, triggers and physical buttons. | Controls and touch confirmed on the tested installation. |
 | **Console Mode** | Play on an HDMI display, with the Portable screen off; return to Mirror Mode to use both screens. | Restored; HDMI behaviour needs a repeat check for the next package. |
 | **NVIDIA Game Mapper** | Map the built-in controller to touchscreen controls. Enable it, open a game, then hold **Start**. | Original NVIDIA mapper integrated; support depends on the game. |
-| **Wireless SHIELD Controller** | Pair the **2015 P2570** controller and view its battery, connection and device details, or forget it. | Connection restored and previously tested; accessory retest pending for the next package. |
-| **SHIELD remote** | Accessory pairing is available. | Remote compatibility is not yet confirmed. |
+| **Wireless SHIELD Controller** | Settings for the **2015 P2570** controller: battery, connection, device details and pairing. | Pairing is unavailable in the current package; repair and retest are pending. |
 | **MicroSD storage** | Use a card separately, or adopt a suitable card as internal storage. | Storage checked. Adoption erases the card and ties it to this installation. |
 
 These are retained or adapted NVIDIA features inside an **unofficial ROM**, not an official NVIDIA update. The wireless controller uses Wi-Fi Direct; streaming and controller use share the radio.
@@ -65,9 +64,9 @@ Map **Back, Sound and the NVIDIA short press** globally or for one app. Choose a
 
 ### Quick Panel, without leaving your game
 
-![SHIELD Quick Panel open over an app, with Home, recent apps, volume and Quit shortcuts](images/quick-panel-sidebar.png)
+![SHIELD Quick Panel open over an app, with Home, recent apps, volume, fan and Quit shortcuts](images/quick-panel-sidebar.png)
 
-*Example sidebar layout. Available options can vary; the background app is not included.*
+*Quick Panel captured on the SHIELD. The background app is not included.*
 
 Swipe from the left or hold **Back** for shortcuts to Home, recent apps, volume, cooling and Quit. Turn it off for individual apps when you want uninterrupted streaming. It needs your permission to enable its Accessibility service.
 
@@ -87,6 +86,8 @@ Choose a game, turn **Use RothGL** on, and try it. Turn it off to return to norm
 **Show more ES3 games** may make more downloads visible in Google Play; it does not guarantee they will run. RothGL is experimental and **does not provide complete ES3 support**.
 
 ### Cooling that fits how you play
+
+![Fan mode choices: Auto, Quiet, Performance and Maximum cooling](images/fan-modes.png)
 
 Choose **Quiet**, **Performance**, **Maximum cooling**, or **Auto**. Auto adds cooling for the apps you select and returns to Quiet elsewhere and with the screen off. It needs the Quick Panel Accessibility service; the sidebar itself can stay off.
 
