@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="390" viewBox="0 0 1280 390" role="img" aria-labelledby="title desc">
+  <title id="title">SHIELD Portable — Android 8.1</title>
+  <desc id="desc">A black and green banner with an abstract handheld illustration. Built for handheld play.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1"><stop stop-color="#080c0a"/><stop offset="1" stop-color="#17221b"/></linearGradient>
+    <linearGradient id="screen" x2="1" y2="1"><stop stop-color="#17291d"/><stop offset="1" stop-color="#080e0a"/></linearGradient>
+  </defs>
+  <rect width="1280" height="390" rx="24" fill="url(#background)"/>
+  <path d="M0 389H1280" stroke="#86c800" stroke-width="3"/>
+  <g fill="none" stroke="#23442b" opacity=".45"><path d="M720 0L1080 390M840 0L1200 390M960 0L1280 350"/><circle cx="1175" cy="58" r="160"/></g>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <rect x="56" y="48" width="162" height="30" rx="15" fill="#21361b"/>
+    <text x="137" y="68" text-anchor="middle" fill="#b6e66c" font-size="13" font-weight="700" letter-spacing="1.5">ANDROID 8.1</text>
+    <text x="54" y="151" fill="#ffffff" font-size="52" font-weight="700" letter-spacing="1">SHIELD</text>
+    <text x="54" y="207" fill="#ffffff" font-size="52" font-weight="300" letter-spacing="3">PORTABLE</text>
+    <text x="57" y="250" fill="#b4bfb8" font-size="21">Built for handheld play.</text>
+    <g font-size="14" fill="#d8e0db">
+      <circle cx="63" cy="308" r="4" fill="#91cf38"/><text x="78" y="313">Familiar controls</text>
+      <circle cx="264" cy="308" r="4" fill="#91cf38"/><text x="279" y="313">A fresh home</text>
+      <circle cx="439" cy="308" r="4" fill="#91cf38"/><text x="454" y="313">More ways to play</text>
+    </g>
+    <g transform="translate(760 57)">
+      <rect x="0" y="0" width="405" height="245" rx="25" fill="#111815" stroke="#425347" stroke-width="2"/>
+      <rect x="14" y="14" width="377" height="217" rx="15" fill="url(#screen)"/>
+      <text x="36" y="53" fill="#b4d88b" font-size="12" letter-spacing="3">YOUR LIBRARY</text>
+      <rect x="34" y="72" width="99" height="132" rx="8" fill="#2d4329" stroke="#92d03a" stroke-width="2"/>
+      <path d="M65 127L103 147L65 167Z" fill="#a4de50"/>
+      <rect x="147" y="73" width="99" height="131" rx="8" fill="#27312c"/>
+      <path d="M174 134H218M196 112V156" stroke="#7b9785" stroke-width="5" stroke-linecap="round"/>
+      <rect x="260" y="73" width="99" height="131" rx="8" fill="#27312c"/>
+      <circle cx="309" cy="139" r="21" fill="none" stroke="#7b9785" stroke-width="4"/>
+      <path d="M-13 259Q-37 281-17 296L37 307H368L421 296Q441 281 418 259Z" fill="#202c24" stroke="#425347" stroke-width="2"/>
+      <path d="M60 271H83M71.5 260V283" stroke="#bac9bf" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="329" cy="272" r="10" fill="#76a53b"/>
+      <circle cx="359" cy="272" r="10" fill="#525f55"/>
+      <rect x="171" y="266" width="62" height="8" rx="4" fill="#536c54"/>
+    </g>
+  </g>
+</svg>

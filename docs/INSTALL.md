@@ -1,5 +1,7 @@
 # Install Android 8.1
 
+[← Home & features](../README.md) · [SHIELD settings](SETTINGS.md)
+
 **The ROM download is not available yet. Do not start flashing until it is available here.**
 
 Use the original SHIELD Portable with a working USB data connection and reliable charging. Back up your files and saves to a PC before starting. Unlocking or resetting can erase data. An SD card used as internal storage also needs a backup; do not format it.
@@ -14,11 +16,16 @@ Open PowerShell inside the extracted Platform Tools folder.
 
 - **ROM ZIP:** not available yet.
 - **Recovery:** [TWRP 3.2.2-0 for SHIELD Portable](https://dl.twrp.me/roth/twrp-3.2.2-0-roth.img.html).
-- **Google apps, optional:** [Open GApps ARM 8.1 pico](https://sourceforge.net/projects/opengapps/files/arm/20220215/). Choose `open_gapps-arm-8.1-pico-20220215.zip`, not ARM64.
+- **Google apps, optional:** [Open GApps ARM 8.1 pico](https://sourceforge.net/projects/opengapps/files/arm/20220215/open_gapps-arm-8.1-pico-20220215.zip/). Choose `open_gapps-arm-8.1-pico-20220215.zip`, not ARM64.
 - **Small Google-apps setup:** [gapps-config.txt](../resources/gapps-config.txt). Save it beside the Google-apps ZIP using that exact name.
+- **Our Google-apps support ZIP:** [download the Google Services fix](https://github.com/hakami55/shield-portable-android81/raw/refs/heads/main/resources/roth-google-services-repair-candidate.zip). Required with the exact Google-apps package above. This is a helper, **not a ROM**.
 - **File checks:** [SHA256SUMS.txt](../resources/SHA256SUMS.txt).
 
 Do not substitute a newer recovery image: it may be too large for the device. These downloads come from their own projects; no Google apps are included in the ROM.
+
+The support ZIP contains only repair scripts. It prepares the native libraries from your installed Google Services APK; it does not include or replace Google's APK. Do not use it with another Google-apps version, another device or stock Android. If its checks reject your installation, stop—do not force it.
+
+To check a downloaded file in PowerShell, run `Get-FileHash .\filename -Algorithm SHA256` and compare it with the checksum list. A matching checksum checks the file, not whether installation has been tested on your device.
 
 ## 3 Enable USB debugging
 
@@ -32,9 +39,23 @@ Run:
 
 Continue only if the correct SHIELD appears as `device`.
 
-## 4 Unlock the bootloader if needed
+Check the device and bootloader:
 
-**This erases data. Skip unlocking if your SHIELD is already unlocked.**
+```powershell
+.\adb.exe shell getprop ro.product.device
+.\adb.exe shell getprop ro.bootloader
+```
+
+The device must be `roth`. The bootloader must match one of these supported versions:
+
+- `01.00.14422_318.3689`
+- `01.00.32208_722.2550`
+
+If it does not match, stop and follow [NVIDIA's official SHIELD Portable update instructions](https://developer.nvidia.com/shield-open-source#SHIELD_PORTABLE) first. An official recovery installation can erase data; back up before using it. Do not substitute another model's bootloader files.
+
+## 4 Enter the bootloader
+
+Enter the bootloader and check the connected device:
 
 ```powershell
 .\adb.exe reboot bootloader
@@ -42,9 +63,9 @@ Continue only if the correct SHIELD appears as `device`.
 .\fastboot.exe getvar product
 ```
 
-The product must be `roth`. If it is different, stop.
+The product must be `Roth` (case does not matter). If it is different, stop.
 
-Only if the bootloader is locked and your backup is complete:
+**Unlocking erases data. Skip this command if your SHIELD is already unlocked.** Only if the bootloader is locked and your backup is complete:
 
 ```powershell
 .\fastboot.exe oem unlock
@@ -77,7 +98,16 @@ Enter **Recovery** from the SHIELD bootloader menu before returning to Android. 
 
 Use the reset/install directions supplied with the ROM download. Do not guess which storage to wipe. Never select the SD card or internal shared storage just to clear an installation error.
 
-The installation order is **ROM ZIP → optional Google-apps ZIP → first Android boot**. Keep the linked configuration file beside the Google-apps ZIP. If there is a storage or compatibility error, stop rather than forcing installation.
+Without Google apps, the installation order is **ROM ZIP → first Android boot**.
+
+With Google apps, the order is:
+
+1. Install the **ROM ZIP**.
+2. Install [Open GApps ARM 8.1 pico](https://sourceforge.net/projects/opengapps/files/arm/20220215/open_gapps-arm-8.1-pico-20220215.zip/), keeping [gapps-config.txt](../resources/gapps-config.txt) beside it.
+3. Install [our Google Services fix](https://github.com/hakami55/shield-portable-android81/raw/refs/heads/main/resources/roth-google-services-repair-candidate.zip).
+4. Reboot to Android and complete setup.
+
+Install all three ZIPs in the **same TWRP session, before the first Android boot**. If there is a storage or compatibility error, stop rather than forcing installation. The helper being available does not mean the ROM is ready to download.
 
 Do not flash another SHIELD model's files or relock the bootloader while using this ROM.
 
@@ -85,6 +115,8 @@ Do not flash another SHIELD model's files or relock the bootloader while using t
 
 Complete Android setup, then open [SHIELD settings](SETTINGS.md). Check the controls, Wi-Fi, sound, sleep/wake, and SD files before restoring everything.
 
-Only enable the Quick Panel accessibility service if you want its shortcuts. Leave optional graphics settings off unless you need them.
+Enable the Quick Panel accessibility service if you want the sidebar **or Auto cooling**. Its sidebar master switch can stay off when you only use Auto cooling. Leave optional graphics settings off unless you need them.
+
+After setup, turn USB debugging off unless you need it. Root access and GPU boost should stay off for normal use.
 
 To return to the original software, use [NVIDIA's SHIELD Portable recovery package and instructions](https://developer.nvidia.com/shield-open-source#SHIELD_PORTABLE).

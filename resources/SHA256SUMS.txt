@@ -1,2 +1,4 @@
 bb4ac27eecb0eba4ac991a6658a499e0c8ab442c137bbb8c7d3b460de72dd020  twrp-3.2.2-0-roth.img
 034c91278ab3c7f9af15fb8a77633dabaf490105cc42ad7d5be616220202f2d4  open_gapps-arm-8.1-pico-20220215.zip
+7c6136b71638d36dec46ce99d02441801a51e7058f4bf057257eed1eba8dba6c  gapps-config.txt
+4e59c6a6b1c6d87ee331668f224e295774910a01ab2705dc97b682f9a9ea914f  roth-google-services-repair-candidate.zip

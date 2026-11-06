@@ -1,8 +1,26 @@
 # SHIELD settings
 
+[← Home & features](../README.md) · [Installation & downloads](INSTALL.md)
+
 Open **Android Settings → Shield settings**.
 
+## Start here
+
+| I want to… | Open |
+|---|---|
+| Change a button for one app | Controller settings → Built-in controller → App profile |
+| Map buttons to touchscreen controls | Controller settings → NVIDIA touchscreen game mapper |
+| Pair a wireless SHIELD controller | SHIELD accessories → Pair accessory |
+| Change my home screen | Launcher settings |
+| Open or disable in-game shortcuts | Quick Panel settings |
+| Choose quieter or stronger cooling | Fan control |
+| Try graphics compatibility or an FPS counter | RothGL |
+
+On a fresh setup, **Dark** style and the **Black** variant are selected. Change them in **Android Settings → Display → Style**. An upgrade keeps an existing style choice.
+
 ## Controller settings
+
+![Controller profiles and short-press button settings](../images/controller-profiles.png)
 
 | Choice | What it does |
 |---|---|
@@ -31,11 +49,15 @@ Button actions:
 
 ### NVIDIA touchscreen Game Mapper
 
+![NVIDIA touchscreen Game Mapper settings](../images/game-mapper.png)
+
 - **On:** allows controller buttons to be placed over touchscreen controls.
 - **Off:** disables the mapper.
 - **How to open Game Mapper:** open the app and hold **Start**, move the buttons/sticks over its touch controls, then save.
 
 ## SHIELD accessories
+
+The restored wireless-controller connection targets the **2015 SHIELD Controller (P2570)**. It uses Wi-Fi Direct, not Bluetooth. Do not assume another controller model or a SHIELD remote is supported. The next package still needs its accessory retest.
 
 - **Pair accessory:** opens accessory pairing.
 - **Accessory name:** opens its details.
@@ -44,11 +66,19 @@ Button actions:
 - **Device information:** shows details supplied by the accessory.
 - **Forget:** removes the pairing; pair again to reconnect.
 
+## Console Mode and HDMI
+
+Connect an HDMI display and open the Console Mode app.
+
+- **Console Mode:** use the external display while the Portable screen is off.
+- **Mirror Mode:** restore the Portable display and mirror to HDMI.
+
+Save your game before switching; the display transition can restart Android's interface. Console Mode is restored, but HDMI behaviour still needs a repeat check on the next package.
+
 ## Launcher settings
 
 - **Startup intro:** play or skip the intro when the launcher starts fresh.
-- **Video intro:** on for video; off for the lighter animation.
-- **Intro sound:** play or mute intro audio. It follows media volume.
+- The public ROM uses the lightweight built-in logo animation; no startup video or intro sound is included.
 - **Preview startup intro:** play it now. **A or touch skips.**
 - **Quick Panel settings:** opens the sidebar controls below.
 - **Android settings:** opens normal Android settings.
@@ -62,6 +92,8 @@ In the library, **Cover / icon** chooses artwork or restores the original icon. 
 **D-pad / left stick:** move. **A:** select/details. **B:** back. **X:** quick launch. **L1/R1:** change tabs. **L2/R2:** change Games/Apps filters. **Start:** open or close the menu.
 
 ## Quick Panel
+
+![Quick Panel global and per-app options](../images/quick-panel.png)
 
 Open **Launcher settings → Quick Panel settings**.
 
@@ -82,19 +114,23 @@ The master switch must still be on. If Back is mapped to Select/Guide, use swipe
 
 ### Sidebar choices
 
-**Resume:** close the sidebar. **Home:** open the launcher. **Recent apps:** show open apps. **Volume −/+ :** change media volume. **Quit:** close the current app after confirmation. **Settings:** open panel settings.
+**Resume:** close the sidebar. **Home:** open the launcher. **Recent apps:** show open apps. **Volume −/+ :** change media volume. **Fan:** cycle cooling modes. **Quit:** close the current app after confirmation. **Settings:** open panel settings.
 
 Opening the panel may not pause the app. Quit can lose unsaved progress.
 
 ## Fan control
 
-- **Quiet:** quieter, original fan behaviour.
-- **Performance:** stronger cooling for all apps.
-- **Maximum cooling:** strongest cooling; louder fan.
-- **Auto:** stronger cooling for selected foreground apps, quieter elsewhere.
+- **Quiet:** quiet cooling and automatic CPU power saving.
+- **Performance:** stronger cooling and all four CPU cores available; uses more battery.
+- **Maximum cooling:** strongest cooling and all four CPU cores available; louder and uses more battery.
+- **Auto:** Performance for selected foreground apps; Quiet elsewhere and when the screen is off.
 - **Apps with extra cooling:** choose the apps used by Auto.
 
-Auto needs the Quick Panel service to follow the current app. **GPU boost**, if shown as unavailable, is not active. **Overclock settings** are unavailable.
+Auto needs the Quick Panel accessibility service to follow the current app. The sidebar master switch can stay off if you only want Auto cooling. Disabling the service releases Auto's Performance request; choose Quiet if you stop using Auto.
+
+Quiet does not mean the fan immediately stops: it may keep running while the device cools down. Manual Performance and Maximum cooling do not automatically become Quiet when the screen turns off.
+
+**GPU boost is unavailable in this ROM. Leave it off. Overclock settings are unavailable.**
 
 ## RothGL
 
@@ -157,3 +193,11 @@ Keep these off unless you need a specific workaround. They replace the selected 
 - **Counter support:** explains availability.
 
 The counter needs a compatible graphics profile. Enabling it does not enable RothGL, and the number may differ from frames actually displayed.
+
+## App Fixes
+
+Not included in this ROM. RothGL graphics settings remain available separately.
+
+## SHIELD Tester
+
+Not included in this ROM. Button remapping and the controller test inside SHIELD settings remain available.
