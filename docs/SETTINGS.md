@@ -57,7 +57,7 @@ Button actions:
 
 ## SHIELD accessories
 
-The wireless-controller settings target the **2015 SHIELD Controller (P2570)**. It uses Wi-Fi Direct, not Bluetooth. Other controller models are not confirmed. **Pairing is unavailable in the current package; repair and retest are pending.**
+The wireless-controller settings target the **2015 SHIELD Controller (P2570)**. It uses Wi-Fi Direct, not Bluetooth. Other controller models are not confirmed. Connection and buttons were confirmed with the restored component; a repeat check of the complete package is still pending.
 
 - **Pair accessory:** opens accessory pairing.
 - **Accessory name:** opens its details.
@@ -70,10 +70,10 @@ The wireless-controller settings target the **2015 SHIELD Controller (P2570)**. 
 
 Connect an HDMI display and open the Console Mode app.
 
-- **Console Mode:** use the external display while the Portable screen is off.
+- **Console Mode:** use the external display at 1080p while the Portable screen is off.
 - **Mirror Mode:** restore the Portable display and mirror to HDMI.
 
-Save your game before switching; the display transition can restart Android's interface. Console Mode is restored, but HDMI behaviour still needs a repeat check on the next package.
+Save your game before switching; the display transition can restart Android's interface and close apps. TV picture and audio, Portable screen-off, and return to the Portable screen and speakers were confirmed with the restored component. A repeat check of the complete package is still pending.
 
 ## Launcher settings
 

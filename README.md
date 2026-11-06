@@ -15,22 +15,22 @@
 </p>
 
 > **Documentation preview — ROM download is not available yet.**
-> The next package still needs final device checks before testing downloads open. Do not flash a different ROM using this guide.
+> A local ROM build has passed a clean setup with Google apps, restart and sleep/wake checks. Download availability is still pending. Do not flash a different ROM using this guide.
 
 ## What works
 
 The tested installation has working **built-in controls, touchscreen, speakers, Wi-Fi, storage, launcher, restart and sleep/wake**. Google Play also works with the optional Google-apps setup.
 
-The next downloadable package still needs its own final checks. Accessory availability below is not a promise that every accessory has been retested with that package.
+The complete package still needs its final accessory checks. Results below distinguish restored features from checks of the complete package.
 
 ## Original SHIELD features
 
 | Feature | What you can do | Testing note |
 |---|---|---|
 | **Built-in gamepad** | Play with the sticks, triggers and physical buttons. | Controls and touch confirmed on the tested installation. |
-| **Console Mode** | Play on an HDMI display, with the Portable screen off; return to Mirror Mode to use both screens. | Restored; HDMI behaviour needs a repeat check for the next package. |
+| **Console Mode** | Play on an HDMI display at 1080p, with the Portable screen off; return to Mirror Mode to use both screens. | Picture, screen-off and TV sound confirmed with the restored component; final package recheck pending. |
 | **NVIDIA Game Mapper** | Map the built-in controller to touchscreen controls. Enable it, open a game, then hold **Start**. | Original NVIDIA mapper integrated; support depends on the game. |
-| **Wireless SHIELD Controller** | Settings for the **2015 P2570** controller: battery, connection, device details and pairing. | Pairing is unavailable in the current package; repair and retest are pending. |
+| **Wireless SHIELD Controller** | Settings for the **2015 P2570** controller: battery, connection, device details and pairing. | Connection and buttons confirmed with the restored component; final package recheck pending. |
 | **MicroSD storage** | Use a card separately, or adopt a suitable card as internal storage. | Storage checked. Adoption erases the card and ties it to this installation. |
 
 These are retained or adapted NVIDIA features inside an **unofficial ROM**, not an official NVIDIA update. The wireless controller uses Wi-Fi Direct; streaming and controller use share the radio.
@@ -99,7 +99,7 @@ GPU boost and overclocking are **disabled** in this ROM.
 
 **[Explore every SHIELD setting →](docs/SETTINGS.md)**
 
-Google apps are optional. Games, App Fixes and SHIELD Tester are not included. Screenshots show the interface, not required switch positions; appearance may vary with your theme.
+Google apps are optional. The package linked in the installation guide needs no separate Google Services repair ZIP. Games, App Fixes and SHIELD Tester are not included. Screenshots show the interface, not required switch positions; appearance may vary with your theme.
 
 ---
 

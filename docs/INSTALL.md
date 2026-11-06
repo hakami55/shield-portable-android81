@@ -16,14 +16,19 @@ Open PowerShell inside the extracted Platform Tools folder.
 
 - **ROM ZIP:** not available yet.
 - **Recovery:** [TWRP 3.2.2-0 for SHIELD Portable](https://dl.twrp.me/roth/twrp-3.2.2-0-roth.img.html).
-- **Google apps, optional:** [Open GApps ARM 8.1 pico](https://sourceforge.net/projects/opengapps/files/arm/20220215/open_gapps-arm-8.1-pico-20220215.zip/). Choose `open_gapps-arm-8.1-pico-20220215.zip`, not ARM64.
-- **Small Google-apps setup:** [gapps-config.txt](../resources/gapps-config.txt). Save it beside the Google-apps ZIP using that exact name.
-- **Our Google-apps support ZIP:** [download the Google Services fix](https://github.com/hakami55/shield-portable-android81/raw/refs/heads/main/resources/roth-google-services-repair-candidate.zip). Required with the exact Google-apps package above. This is a helper, **not a ROM**.
+- **Google apps, optional:** [Download MindTheGapps for ARM / Android 8.1](https://github.com/MindTheGapps/8.1.0-arm/releases/download/MindTheGapps-8.1.0-arm-20180808_153837/MindTheGapps-8.1.0-arm-20180808_153837.zip). Choose ARM, not ARM64. [Official release page](https://github.com/MindTheGapps/8.1.0-arm/releases/tag/MindTheGapps-8.1.0-arm-20180808_153837).
 - **File checks:** [SHA256SUMS.txt](../resources/SHA256SUMS.txt).
 
 Do not substitute a newer recovery image: it may be too large for the device. These downloads come from their own projects; no Google apps are included in the ROM.
 
-The support ZIP contains only repair scripts. It prepares the native libraries from your installed Google Services APK; it does not include or replace Google's APK. Do not use it with another Google-apps version, another device or stock Android. If its checks reject your installation, stop—do not force it.
+These are the exact recovery and Google-apps files used for the clean setup check:
+
+| File | Size |
+|---|---:|
+| `twrp-3.2.2-0-roth.img` | 8,384,512 bytes |
+| `MindTheGapps-8.1.0-arm-20180808_153837.zip` | 106,590,724 bytes |
+
+The linked Google-apps package does **not** need a separate Google Services repair ZIP or `gapps-config.txt`. Do not install the old repair ZIP with it. Use a clean setup when changing from a different Google-apps package; do not install one package over another.
 
 To check a downloaded file in PowerShell, run `Get-FileHash .\filename -Algorithm SHA256` and compare it with the checksum list. A matching checksum checks the file, not whether installation has been tested on your device.
 
@@ -103,11 +108,12 @@ Without Google apps, the installation order is **ROM ZIP → first Android boot*
 With Google apps, the order is:
 
 1. Install the **ROM ZIP**.
-2. Install [Open GApps ARM 8.1 pico](https://sourceforge.net/projects/opengapps/files/arm/20220215/open_gapps-arm-8.1-pico-20220215.zip/), keeping [gapps-config.txt](../resources/gapps-config.txt) beside it.
-3. Install [our Google Services fix](https://github.com/hakami55/shield-portable-android81/raw/refs/heads/main/resources/roth-google-services-repair-candidate.zip).
-4. Reboot to Android and complete setup.
+2. Install [MindTheGapps ARM / Android 8.1](https://github.com/MindTheGapps/8.1.0-arm/releases/tag/MindTheGapps-8.1.0-arm-20180808_153837).
+3. Reboot to Android, connect Wi-Fi and complete setup.
 
-Install all three ZIPs in the **same TWRP session, before the first Android boot**. If there is a storage or compatibility error, stop rather than forcing installation. The helper being available does not mean the ROM is ready to download.
+Install both ZIPs in the **same TWRP session, before the first Android boot**. No separate repair ZIP is needed. If there is a storage or compatibility error, stop rather than forcing installation.
+
+After setup, leave Wi-Fi connected so Google Play can update itself. Open [Google Play services](https://play.google.com/store/apps/details?id=com.google.android.gms) on the SHIELD and choose **Update** if offered. Let installation finish before restarting or installing games. [Google's update help](https://support.google.com/googleplay/answer/9037938?hl=en).
 
 Do not flash another SHIELD model's files or relock the bootloader while using this ROM.
 
