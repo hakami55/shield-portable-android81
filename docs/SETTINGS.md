@@ -82,7 +82,7 @@ Save your game before switching; the display transition can restart Android's in
 *Example library; games and apps shown are not included.*
 
 - **Startup intro:** play or skip the intro when the launcher starts fresh.
-- The public ROM uses the lightweight built-in logo animation; no startup video or intro sound is included.
+- The launcher uses a lightweight built-in logo animation.
 - **Preview startup intro:** play it now. **A or touch skips.**
 - **Quick Panel settings:** opens the sidebar controls below.
 - **Android settings:** opens normal Android settings.
@@ -128,10 +128,6 @@ Opening the panel may not pause the app. Quit can lose unsaved progress.
 
 ## Fan control
 
-![Fan settings with Quiet selected and GPU boost inactive](../images/fan-settings.png)
-
-![Available fan modes](../images/fan-modes.png)
-
 - **Quiet:** quiet cooling and automatic CPU power saving.
 - **Performance:** stronger cooling and all four CPU cores available; uses more battery.
 - **Maximum cooling:** strongest cooling and all four CPU cores available; louder and uses more battery.
@@ -141,8 +137,6 @@ Opening the panel may not pause the app. Quit can lose unsaved progress.
 Auto needs the Quick Panel accessibility service to follow the current app. The sidebar master switch can stay off if you only want Auto cooling. Disabling the service releases Auto's Performance request; choose Quiet if you stop using Auto.
 
 Quiet does not mean the fan immediately stops: it may keep running while the device cools down. Manual Performance and Maximum cooling do not automatically become Quiet when the screen turns off.
-
-**GPU boost is unavailable in this ROM. Leave it off. Overclock settings are unavailable.**
 
 ## RothGL
 
@@ -205,11 +199,3 @@ Keep these off unless you need a specific workaround. They replace the selected 
 - **Counter support:** explains availability.
 
 The counter needs a compatible graphics profile. Enabling it does not enable RothGL, and the number may differ from frames actually displayed.
-
-## App Fixes
-
-Not included in this ROM. RothGL graphics settings remain available separately.
-
-## SHIELD Tester
-
-Not included in this ROM. Button remapping and the controller test inside SHIELD settings remain available.

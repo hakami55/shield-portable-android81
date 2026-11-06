@@ -28,7 +28,7 @@ These are the exact recovery and Google-apps files used for the clean setup chec
 | `twrp-3.2.2-0-roth.img` | 8,384,512 bytes |
 | `MindTheGapps-8.1.0-arm-20180808_153837.zip` | 106,590,724 bytes |
 
-The linked Google-apps package does **not** need a separate Google Services repair ZIP or `gapps-config.txt`. Do not install the old repair ZIP with it. Use a clean setup when changing from a different Google-apps package; do not install one package over another.
+Use a clean setup when changing from a different Google-apps package; do not install one package over another.
 
 To check a downloaded file in PowerShell, run `Get-FileHash .\filename -Algorithm SHA256` and compare it with the checksum list. A matching checksum checks the file, not whether installation has been tested on your device.
 
@@ -111,7 +111,7 @@ With Google apps, the order is:
 2. Install [MindTheGapps ARM / Android 8.1](https://github.com/MindTheGapps/8.1.0-arm/releases/tag/MindTheGapps-8.1.0-arm-20180808_153837).
 3. Reboot to Android, connect Wi-Fi and complete setup.
 
-Install both ZIPs in the **same TWRP session, before the first Android boot**. No separate repair ZIP is needed. If there is a storage or compatibility error, stop rather than forcing installation.
+Install both ZIPs in the **same TWRP session, before the first Android boot**. If there is a storage or compatibility error, stop rather than forcing installation.
 
 After setup, leave Wi-Fi connected so Google Play can update itself. Open [Google Play services](https://play.google.com/store/apps/details?id=com.google.android.gms) on the SHIELD and choose **Update** if offered. Let installation finish before restarting or installing games. [Google's update help](https://support.google.com/googleplay/answer/9037938?hl=en).
 
@@ -123,6 +123,6 @@ Complete Android setup, then open [SHIELD settings](SETTINGS.md). Check the cont
 
 Enable the Quick Panel accessibility service if you want the sidebar **or Auto cooling**. Its sidebar master switch can stay off when you only use Auto cooling. Leave optional graphics settings off unless you need them.
 
-After setup, turn USB debugging off unless you need it. Root access and GPU boost should stay off for normal use.
+After setup, turn USB debugging off unless you need it. Root access should stay off for normal use.
 
 To return to the original software, use [NVIDIA's SHIELD Portable recovery package and instructions](https://developer.nvidia.com/shield-open-source#SHIELD_PORTABLE).

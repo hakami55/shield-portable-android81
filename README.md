@@ -87,11 +87,7 @@ Choose a game, turn **Use RothGL** on, and try it. Turn it off to return to norm
 
 ### Cooling that fits how you play
 
-![Fan mode choices: Auto, Quiet, Performance and Maximum cooling](images/fan-modes.png)
-
 Choose **Quiet**, **Performance**, **Maximum cooling**, or **Auto**. Auto adds cooling for the apps you select and returns to Quiet elsewhere and with the screen off. It needs the Quick Panel Accessibility service; the sidebar itself can stay off.
-
-GPU boost and overclocking are **disabled** in this ROM.
 
 ## Ready to get started?
 
@@ -99,7 +95,7 @@ GPU boost and overclocking are **disabled** in this ROM.
 
 **[Explore every SHIELD setting →](docs/SETTINGS.md)**
 
-Google apps are optional. The package linked in the installation guide needs no separate Google Services repair ZIP. Games, App Fixes and SHIELD Tester are not included. Screenshots show the interface, not required switch positions; appearance may vary with your theme.
+Google apps are optional; follow the installation guide to add them. Screenshots show the interface, not required switch positions; appearance may vary with your theme.
 
 ---
 
